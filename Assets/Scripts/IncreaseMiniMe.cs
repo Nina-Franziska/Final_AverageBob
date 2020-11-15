@@ -15,7 +15,7 @@ public class IncreaseMiniMe : MonoBehaviour
     [SerializeField]
     float bendOverAmount = 200f;
 
-    //[SerializeField]
+    [SerializeField]
     bool taskCompleted = false;
 
 
@@ -23,12 +23,14 @@ public class IncreaseMiniMe : MonoBehaviour
     GameObject miniMe;
 
     [SerializeField]
-    float scaleAmount;
+    public float scaleAmount;
 
 
    //s Vector3 scale;
     ConfigurableJoint joint;
     JointDrive drive;
+
+    float time = 0;
 
 
 
@@ -60,11 +62,16 @@ public class IncreaseMiniMe : MonoBehaviour
 
         CompletedTasksCounter();
         BurdenOverTime();
-        print(Time.deltaTime);
-     
+
+
+
 
 
     }
+
+
+
+
 
 
 
@@ -105,14 +112,23 @@ public class IncreaseMiniMe : MonoBehaviour
     void BurdenOverTime()
     {
 
-        if ((Time.deltaTime %  2) == 0)
+        time += Time.deltaTime;
+
+       
+
+        if (time >= 7)
         {
 
             taskCompleted = true;
             print("stress");
+            time = 0;
+
+
 
         }
 
+
+  
 
     }
 
