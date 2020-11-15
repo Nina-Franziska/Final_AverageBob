@@ -75,7 +75,7 @@ public class IncreaseMiniMe : MonoBehaviour
                 joint.zDrive = drive;
                 joint.xDrive = drive;
                 joint.yDrive = drive;
-                print(drive.positionSpring);
+             
             
 
             }
