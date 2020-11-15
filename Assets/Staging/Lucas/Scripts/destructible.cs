@@ -7,16 +7,23 @@ public class destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
 
-    private void Update()
+    private void Start()
     {
         
     }
 
-
-    private void OnMouseDown()
+    private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(destroyedVersion, transform.position, transform.rotation);
-        Destroy(gameObject);
+
+        if (collision.relativeVelocity.magnitude > 2)
+        {
+            Instantiate(destroyedVersion, transform.position, transform.rotation);
+            Destroy(gameObject);
+
+        }
+          
+    
+
     }
 
 

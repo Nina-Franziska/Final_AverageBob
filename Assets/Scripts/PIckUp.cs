@@ -41,7 +41,7 @@ public class PIckUp : MonoBehaviour
 
         float dist =  Vector3.Distance(transform.position, grabObjArray[i].transform.position);
 
-            if (dist < 0.8)
+            if (dist < 1)
             {
 
                 Grab(grabObjArray[i]);
@@ -65,7 +65,7 @@ public class PIckUp : MonoBehaviour
         {
 
             handFree = false;
-
+            grabObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             grabObj.GetComponent<Collider>().enabled = false;
             grabObj.GetComponent<Rigidbody>().isKinematic = true;
             grabObj.GetComponent<Rigidbody>().useGravity = false;
@@ -85,7 +85,7 @@ public class PIckUp : MonoBehaviour
 
                 grabObj.GetComponent<Collider>().enabled = true;
                 grabObj.GetComponent<Rigidbody>().isKinematic = false;
-                grabObj.GetComponent<Rigidbody>().useGravity = true;
+                grabObj.GetComponent<Rigidbody>().useGravity = true; 
                 grabObj.transform.parent = null;
                 handFree = true;
 
