@@ -6,10 +6,19 @@ using UnityEngine;
 public class destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
-    
-    void OnMouseDown ()
+
+    private void Update()
+    {
+        
+    }
+
+
+    private void OnMouseDown()
     {
         Instantiate(destroyedVersion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
+
+
+
 }

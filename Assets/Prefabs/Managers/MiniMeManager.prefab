@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hip: {fileID: 0}
-  intialSpringAmount: 1000
-  bendOverAmount: 200
+  intialSpringAmount: 3000
+  bendOverAmount: 600
   taskCompleted: 0
   miniMe: {fileID: 0}
   scaleAmount: 1.1
