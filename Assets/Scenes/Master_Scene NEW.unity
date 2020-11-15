@@ -315,36 +315,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -8.943, y: -265.464, z: -269.436}
---- !u!1 &595430178 stripped
+--- !u!1 &513402187
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7753454995524866402, guid: 6dd58e4b98505254aba19dfb5fae4a69, type: 3}
-  m_PrefabInstance: {fileID: 400756529}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &595430179
-BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595430178}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1, z: 2.22}
-  m_Center: {x: -0.6, y: 0.52, z: -0.07}
---- !u!114 &595430183
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513402189}
+  - component: {fileID: 513402188}
+  m_Layer: 0
+  m_Name: PlayMakerGUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &513402188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595430178}
+  m_GameObject: {fileID: 513402187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7daab4866a7447289a58629558b1f2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: -73581967, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  previewOnGUI: 1
+  enableGUILayout: 1
+  drawStateLabels: 1
+  enableStateLabelsInBuilds: 1
+  GUITextureStateLabels: 0
+  GUITextStateLabels: 0
+  filterLabelsWithDistance: 0
+  maxLabelDistance: 10
+  controlMouseCursor: 1
+  labelScale: 1
+--- !u!4 &513402189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513402187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &666212861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -557,8 +580,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 743b2facff16a4606b8454e770c892c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   destroyedVersion: {fileID: 2486645144799079726, guid: 6dfa32a1560ae42409e8cf17b70ea58f, type: 3}
 --- !u!1001 &711615468
 PrefabInstance:
@@ -1017,8 +1040,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -1048,8 +1071,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c484e62a3974697a7212b133ad8a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   target: {fileID: 2008525932}
   smoothing: 5
 --- !u!1001 &743546525
@@ -1104,17 +1127,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2199564662803477930, guid: e0fcae8ec9262482bb4df4f85f2b724f, type: 3}
-      propertyPath: intialSpringAmount
-      value: 3000
-      objectReference: {fileID: 0}
+      propertyPath: hip
+      value:
+      objectReference: {fileID: 1727377482}
     - target: {fileID: 2199564662803477930, guid: e0fcae8ec9262482bb4df4f85f2b724f, type: 3}
       propertyPath: miniMe
-      value: 
+      value:
       objectReference: {fileID: 1838539806}
-    - target: {fileID: 2199564662803477930, guid: e0fcae8ec9262482bb4df4f85f2b724f, type: 3}
-      propertyPath: hip
-      value: 
-      objectReference: {fileID: 1727377482}
     - target: {fileID: 2199564662803477931, guid: e0fcae8ec9262482bb4df4f85f2b724f, type: 3}
       propertyPath: m_Name
       value: MiniMeManager
@@ -1408,8 +1427,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_UsePipelineSettings: 0
 --- !u!1001 &1422073214
 PrefabInstance:
