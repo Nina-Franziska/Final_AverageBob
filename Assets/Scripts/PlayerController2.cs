@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController2 : MonoBehaviour
 {
 
-[SerializeField]
-float speed = 0.5f;
+    [SerializeField]
+    float speed = 0.5f;
+
+
 
 
     void FixedUpdate()
@@ -16,11 +18,17 @@ float speed = 0.5f;
         float translationZ = Input.GetAxis("Vertical") * speed;
         float translationX = Input.GetAxis("Horizontal") * speed;
 
-        transform.Translate(translationX, 0, translationZ);
-        //transform.Translate(translationX, 0, translation);
+       // transform.Translate(translationX, 0, translationZ);
+    
 
 
-       
-    }
+            Vector3 movement = new Vector3(translationX, 0.0f, translationZ);
+            transform.rotation = Quaternion.LookRotation(movement);
+
+
+            transform.Translate(movement, Space.World);
+
+
+        }
 }
 
