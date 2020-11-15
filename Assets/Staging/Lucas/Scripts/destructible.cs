@@ -6,10 +6,26 @@ using UnityEngine;
 public class destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
-    
-    void OnMouseDown ()
+
+    private void Start()
     {
-        Instantiate(destroyedVersion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.relativeVelocity.magnitude > 2)
+        {
+            Instantiate(destroyedVersion, transform.position, transform.rotation);
+            Destroy(gameObject);
+
+        }
+          
+    
+
+    }
+
+
+
 }
