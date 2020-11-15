@@ -15,7 +15,7 @@ public class IncreaseMiniMe : MonoBehaviour
     [SerializeField]
     float bendOverAmount = 200f;
 
-    [SerializeField]
+    //[SerializeField]
     bool taskCompleted = false;
 
 
@@ -59,9 +59,13 @@ public class IncreaseMiniMe : MonoBehaviour
     {
 
         CompletedTasksCounter();
+        BurdenOverTime();
+        print(Time.deltaTime);
+     
 
 
     }
+
 
 
     void CompletedTasksCounter()
@@ -91,6 +95,21 @@ public class IncreaseMiniMe : MonoBehaviour
 
 
 
+
+        }
+
+
+    }
+
+
+    void BurdenOverTime()
+    {
+
+        if ((Time.deltaTime %  2) == 0)
+        {
+
+            taskCompleted = true;
+            print("stress");
 
         }
 
