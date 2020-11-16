@@ -27,7 +27,9 @@ public class CompleteTask : MonoBehaviour
 
         if (other.CompareTag("Grab"))
         {
+            
             other.enabled = false;
+            other.gameObject.transform.parent = null;
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.GetComponent<Rigidbody>().useGravity = false;
             other.gameObject.transform.position = transform.position;

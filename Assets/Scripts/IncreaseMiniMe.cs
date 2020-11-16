@@ -25,6 +25,8 @@ public class IncreaseMiniMe : MonoBehaviour
     [SerializeField]
     public float scaleAmount;
 
+    float scale = 1.1f;
+
 
    //s Vector3 scale;
     ConfigurableJoint joint;
@@ -81,7 +83,8 @@ public class IncreaseMiniMe : MonoBehaviour
             if (drive.positionSpring >= 0)
             {
 
-                miniMe.transform.localScale *= scaleAmount; 
+                miniMe.transform.localScale *= scale;
+                scaleAmount += 0.1f;
                 drive.positionSpring -= bendOverAmount;
                 joint.zDrive = drive;
                 joint.xDrive = drive;
@@ -116,11 +119,10 @@ public class IncreaseMiniMe : MonoBehaviour
 
        
 
-        if (time >= 7)
+        if (time >= 5)
         {
 
             taskCompleted = true;
-            print("stress");
             time = 0;
 
 
